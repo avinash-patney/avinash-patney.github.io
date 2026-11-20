@@ -263,16 +263,12 @@
       <div class="relative z-10 mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
         <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
           <div class="lg:col-span-8">
-            <div class="hero-stagger hero-stagger-1 inline-flex flex-wrap items-center gap-2 rounded-full border border-cyanAccent/40 bg-navy/80 px-3.5 py-1.5 font-mono text-[11px] font-medium text-cyan-200 backdrop-blur-md shadow-lg">
+            <div class="hero-stagger hero-stagger-1 inline-flex flex-wrap items-center gap-2 rounded-full border border-cyanAccent/40 bg-navy/80 px-3.5 py-1.5 font-mono text-[11px] font-medium text-gold-light backdrop-blur-md shadow-lg">
               <span class="h-2 w-2 rounded-full bg-emerald-400 pulse-glow"></span>
-              <span>Australia-Based</span>
-              <span class="text-slate-400">&bull;</span>
-              <span class="text-gold-light font-semibold">Open to Relocation: UAE / GCC</span>
-              <span class="text-slate-400">&bull;</span>
-              <span>APAC &bull; EMEA &bull; Americas</span>
+              <span class="font-semibold">Open to Relocation</span>
             </div>
 
-            <h1 class="hero-stagger hero-stagger-2 mt-6 font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl ai-gradient-text">
+            <h1 class="hero-stagger hero-stagger-2 mt-6 pb-2 leading-[1.16] font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl ai-gradient-text">
               Avinash Patney
             </h1>
             <p class="hero-stagger hero-stagger-3 mt-3 text-lg font-semibold tracking-wide text-amber-700 dark:text-gold sm:text-xl">
@@ -351,8 +347,8 @@
                   <dd class="font-mono font-bold text-slate-900 dark:text-white">100+ Specialists</dd>
                 </div>
                 <div class="flex items-center justify-between">
-                  <dt class="text-slate-500 dark:text-slate-400">Target Regions</dt>
-                  <dd class="font-mono font-semibold text-slate-900 dark:text-gold-light">UAE / GCC &bull; APAC</dd>
+                  <dt class="text-slate-500 dark:text-slate-400">Mobility</dt>
+                  <dd class="font-mono font-semibold text-slate-900 dark:text-gold-light">Open to Relocation</dd>
                 </div>
               </dl>
             </div>
@@ -527,15 +523,31 @@
 
         <div class="mt-8 grid gap-6 lg:grid-cols-12">
           <!-- 4D WebGL Canvas -->
-          <div id="canvas-4d-wrap" class="lg:col-span-7 relative overflow-hidden rounded-2xl border border-cyanAccent/30 bg-obsidian shadow-2xl min-h-[340px] sm:min-h-[410px]">
-            <canvas id="canvas-4d" class="h-full w-full block cursor-grab active:cursor-grabbing"></canvas>
-            <div class="pointer-events-none absolute top-4 left-4 flex items-center gap-2 rounded-lg border border-cyanAccent/30 bg-obsidian/80 px-3 py-1.5 font-mono text-xs font-semibold text-cyan-300 backdrop-blur-md">
-              <span class="h-2 w-2 rounded-full bg-cyanAccent pulse-glow"></span>
-              <span id="hud-4d-mode">4D: Agentic AI &amp; Guardrails</span>
+          <div id="canvas-4d-wrap" class="lg:col-span-7 relative overflow-hidden rounded-2xl border border-cyanAccent/30 bg-obsidian shadow-2xl min-h-[360px] sm:min-h-[430px]">
+            <canvas id="canvas-4d" class="h-full w-full block cursor-pointer"></canvas>
+            <div class="pointer-events-none absolute top-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2 rounded-lg border border-cyanAccent/30 bg-obsidian/85 px-3 py-1.5 font-mono text-xs font-semibold text-cyan-300 backdrop-blur-md">
+                <span class="h-2 w-2 rounded-full bg-cyanAccent pulse-glow"></span>
+                <span id="hud-4d-mode">4D: Agentic AI &amp; Guardrails</span>
+              </div>
+              <span class="rounded-lg border border-gold/30 bg-obsidian/85 px-2.5 py-1 font-mono text-[10px] font-semibold text-gold-light backdrop-blur-md">
+                Click model to cycle nodes
+              </span>
             </div>
-            <div class="pointer-events-none absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 font-mono text-[11px] text-slate-400">
-              <span>Drag to rotate &bull; Slider shifts 4D phase</span>
-              <span id="hud-4d-era" class="font-semibold text-gold-light">Era: 2025&ndash;Present (AWS APAC)</span>
+            <!-- Live On-Canvas Data Card -->
+            <div id="hud-4d-card" class="pointer-events-none absolute bottom-11 left-4 right-4 sm:right-auto sm:max-w-sm rounded-xl border border-cyanAccent/35 bg-obsidian/85 p-3.5 backdrop-blur-md shadow-xl transition-all duration-300">
+              <div class="flex items-center justify-between gap-2">
+                <span id="hud-4d-card-kicker" class="font-mono text-[10px] font-bold uppercase tracking-wider text-cyanAccent">AWS &bull; 2025&ndash;Present</span>
+                <span id="hud-4d-card-metric" class="font-mono text-xs font-bold text-gold-light">$50M+ Influenced</span>
+              </div>
+              <div id="hud-4d-card-title" class="mt-1 font-display text-sm font-bold text-white">Sovereign &amp; Agentic AI Architecture</div>
+              <p id="hud-4d-card-body" class="mt-1 text-[11px] leading-relaxed text-slate-300">
+                AI guardrails, PII masking, automated auditability, NVIDIA H100/H200 orchestration &amp; quantum-safe security.
+              </p>
+            </div>
+            <div class="pointer-events-none absolute bottom-3 left-4 right-4 flex flex-wrap items-center justify-between gap-2 font-mono text-[11px] text-slate-400">
+              <span>Click to inspect &bull; Drag to orbit</span>
+              <span id="hud-4d-era" class="font-semibold text-gold-light">Era: 2025&ndash;Present (AWS)</span>
             </div>
           </div>
 
@@ -954,7 +966,7 @@
               <span class="rounded-lg bg-slate-100 dark:bg-navy px-3 py-1.5 text-xs font-semibold text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">Punjabi</span>
             </div>
             <p class="mt-4 text-xs leading-relaxed text-slate-600 dark:text-slate-400">
-              Based in Australia; open to relocation to the <strong class="text-slate-900 dark:text-white">UAE / GCC</strong> for Principal Architect, Engineering Director, and Sovereign AI leadership mandates.
+              <strong class="text-slate-900 dark:text-white">Open to Relocation</strong> for Principal Architect, Engineering Director, and Sovereign AI leadership mandates.
             </p>
           </div>
         </div>
@@ -968,7 +980,7 @@
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-gold">Direct Contact</span>
           <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Connect with Avinash</h2>
           <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-            Available for executive leadership, Principal Architect, Engineering Director, and sovereign AI &amp; cloud security advisory roles across APAC, EMEA, and UAE / GCC.
+            Available for executive leadership, Principal Architect, Engineering Director, and sovereign AI &amp; cloud security advisory roles. Open to relocation.
           </p>
 
           <div class="mt-6 space-y-3">
@@ -1020,7 +1032,7 @@
                 <option value="Engineering Director / Principal Architect Role">Engineering Director / Principal Architect Role</option>
                 <option value="Sovereign AI &amp; GPU/HPC Architecture Advisory">Sovereign AI &amp; GPU/HPC Architecture Advisory</option>
                 <option value="Enterprise Cloud Security &amp; Governance">Enterprise Cloud Security &amp; Governance</option>
-                <option value="UAE / GCC Relocation Opportunity">UAE / GCC Relocation Opportunity</option>
+                <option value="Executive Relocation Opportunity">Executive Relocation Opportunity</option>
               </select>
             </div>
 
@@ -1164,7 +1176,7 @@
           'Architecting Sovereign AI & H100/GB300 GPU Clusters',
           'Securing Agentic AI, Zero Trust & Post-Quantum Cryptography',
           'Influencing $50M+ Strategic AI & Cloud Investments',
-          'Advising C-Suite Across APAC, EMEA & UAE / GCC'
+          'Advising C-Suite Leaders on Enterprise AI Transformation'
         ];
         let pIdx = 0, cIdx = phrases[0].length, deleting = true;
         function tick() {
@@ -1610,14 +1622,28 @@
         window.addEventListener('resize', resize4D);
 
         let isDragging = false;
+        let downX = 0, downY = 0;
         let prevX = 0, prevY = 0;
         let targetRotX = 0.25, targetRotY = 0.4;
+        const dimKeys = ['ai', 'gpu', 'security', 'global'];
+        let currentDimIdx = 0;
+
         canvas.addEventListener('pointerdown', function (e) {
           isDragging = true;
-          prevX = e.clientX;
-          prevY = e.clientY;
+          downX = prevX = e.clientX;
+          downY = prevY = e.clientY;
         });
-        window.addEventListener('pointerup', function () { isDragging = false; });
+        window.addEventListener('pointerup', function (e) {
+          if (isDragging) {
+            const moved = Math.hypot(e.clientX - downX, e.clientY - downY);
+            if (moved < 6) {
+              currentDimIdx = (currentDimIdx + 1) % dimKeys.length;
+              selectDimension(dimKeys[currentDimIdx]);
+              targetRotY += 0.85;
+            }
+          }
+          isDragging = false;
+        });
         window.addEventListener('pointermove', function (e) {
           if (!isDragging) return;
           targetRotY += (e.clientX - prevX) * 0.008;
@@ -1631,6 +1657,10 @@
             hud: '4D: Agentic AI & Guardrails',
             title: 'Agentic AI & Guardrails',
             desc: 'Production LLM architectures featuring automated AI guardrails, PII masking & sanitisation, full auditability, and token-cost optimisation across AWS & Azure OpenAI.',
+            kicker: 'PILLAR 01 • ENTERPRISE AI',
+            metric: 'AWS & Azure OpenAI',
+            cardTitle: 'Agentic AI & Automated Guardrails',
+            cardBody: 'PII masking, data sanitisation, full auditability & token-cost optimisation for regulated workflows.',
             outerColor: 0x38bdf8,
             coreColor: 0xd4af37
           },
@@ -1638,6 +1668,10 @@
             hud: '4D: GPU / HPC Compute Fabric',
             title: 'GPU / HPC Architecture & Orchestration',
             desc: 'High-density AI compute clusters spanning NVIDIA H100, H200, and GB300 platforms, CUDA acceleration, distributed storage, and low-latency networking.',
+            kicker: 'PILLAR 02 • AI INFRASTRUCTURE',
+            metric: 'H100 / H200 / GB300',
+            cardTitle: 'Hyperscale GPU / HPC Orchestration',
+            cardBody: 'CUDA acceleration, distributed storage, low-latency networking & cloud-native platform engineering.',
             outerColor: 0xf59e0b,
             coreColor: 0x38bdf8
           },
@@ -1645,23 +1679,63 @@
             hud: '4D: Sovereign Security & PQC',
             title: 'Zero Trust, Sovereign Cloud & PQC',
             desc: 'Quantum-safe (PQC) and DevSecOps governance aligned to UAE NESA/DESC, DIFC data protection, EU AI Act, and GDPR frameworks.',
+            kicker: 'PILLAR 03 • SECURITY & GOVERNANCE',
+            metric: 'CCSP • Zero Trust • PQC',
+            cardTitle: 'Quantum-Safe Sovereign Governance',
+            cardBody: 'DevSecOps, identity & access, Post-Quantum Cryptography, NESA/DESC, DIFC, EU AI Act & GDPR.',
             outerColor: 0x10b981,
             coreColor: 0x38bdf8
           },
           global: {
             hud: '4D: Global Commercial Scale',
-            title: '25+ Years Across APAC, EMEA & Americas',
+            title: '25+ Years Executive & Commercial Scale',
             desc: '$50M+ strategic investments influenced (AWS), $10M+ revenue opportunities (Azure), $5M+ ACV delivered, and 100+ specialist virtual organisations.',
+            kicker: 'PILLAR 04 • COMMERCIAL IMPACT',
+            metric: '$50M+ Influenced',
+            cardTitle: 'C-Suite Advisory & Delivery at Scale',
+            cardBody: '$10M+ Azure revenue opps, $5M+ ACV across 10+ accounts, 100+ virtual orgs & $2M+ HP R&D budget.',
             outerColor: 0xa855f7,
             coreColor: 0xfbbf24
           }
         };
 
         const eras = [
-          { label: '2000–2011', hud: 'Era: 2000–2011 (IBM & HP R&D)', scale: 0.78 },
-          { label: '2012–2020', hud: 'Era: 2012–2020 (SA Gov & Ricoh)', scale: 0.90 },
-          { label: '2020–2025', hud: 'Era: 2020–2025 (Microsoft Azure)', scale: 1.02 },
-          { label: '2025–Present', hud: 'Era: 2025–Present (AWS APAC)', scale: 1.14 }
+          {
+            label: '2000–2011',
+            hud: 'Era: 2000–2011 (IBM & HP R&D)',
+            scale: 0.78,
+            kicker: 'IBM & HP • 2000–2011',
+            metric: '8 → 25+ Engineers',
+            cardTitle: 'Distributed Systems & Server R&D',
+            cardBody: 'Built HP server systems R&D across India & Australia with $2M+ budget; recruited 50+ professionals.'
+          },
+          {
+            label: '2012–2020',
+            hud: 'Era: 2012–2020 (Gov & Ricoh)',
+            scale: 0.90,
+            kicker: 'SA TREASURY & RICOH • 2012–2020',
+            metric: '5,000+ Staff • $3M+',
+            cardTitle: 'Public-Sector & Enterprise Cloud',
+            cardBody: 'Led cloud-first Azure/O365 adoption for 5,000+ employees and managed a $3M+ enterprise portfolio.'
+          },
+          {
+            label: '2020–2025',
+            hud: 'Era: 2020–2025 (Microsoft Azure)',
+            scale: 1.02,
+            kicker: 'MICROSOFT • 2020–2025',
+            metric: '$10M+ Opps • $5M+ ACV',
+            cardTitle: 'Azure Competitive Strategy & AI',
+            cardBody: 'Coordinated 100+ specialists across Azure engineering & GTM; delivered 10+ enterprise & public-sector accounts.'
+          },
+          {
+            label: '2025–Present',
+            hud: 'Era: 2025–Present (AWS)',
+            scale: 1.14,
+            kicker: 'AWS • 2025–PRESENT',
+            metric: '$50M+ Influenced',
+            cardTitle: 'Sovereign & Agentic AI Architecture',
+            cardBody: 'AI guardrails, PII masking, automated auditability, NVIDIA H100/H200 orchestration & quantum-safe security.'
+          }
         ];
 
         let autoMorph = !prefersReducedMotion;
@@ -1672,13 +1746,44 @@
         const hudMode = document.getElementById('hud-4d-mode');
         const dimTitle = document.getElementById('dim-4d-title');
         const dimDesc = document.getElementById('dim-4d-desc');
+        const cardKicker = document.getElementById('hud-4d-card-kicker');
+        const cardMetric = document.getElementById('hud-4d-card-metric');
+        const cardTitle = document.getElementById('hud-4d-card-title');
+        const cardBody = document.getElementById('hud-4d-card-body');
         const autoBtn = document.getElementById('toggle-4d-auto');
         autoBtn.textContent = autoMorph ? 'Pause Morph' : 'Resume Morph';
 
         function setEra(idx) {
           currentEra = idx;
-          timeLabel.textContent = eras[idx].label;
-          hudEra.textContent = eras[idx].hud;
+          const e = eras[idx];
+          timeLabel.textContent = e.label;
+          hudEra.textContent = e.hud;
+          cardKicker.textContent = e.kicker;
+          cardMetric.textContent = e.metric;
+          cardTitle.textContent = e.cardTitle;
+          cardBody.textContent = e.cardBody;
+          targetRotY += 0.55;
+        }
+
+        function selectDimension(key) {
+          const cfg = dimConfig[key];
+          if (!cfg) return;
+          currentDimIdx = dimKeys.indexOf(key);
+          document.querySelectorAll('.dim-4d-btn').forEach(function (b) {
+            const isSel = b.getAttribute('data-dim') === key;
+            b.className = isSel
+              ? 'dim-4d-btn rounded-xl border border-cyanAccent bg-sky-500/15 px-3 py-2.5 text-left text-xs font-bold text-sky-700 dark:text-cyanAccent transition-all'
+              : 'dim-4d-btn rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy px-3 py-2.5 text-left text-xs font-semibold text-slate-700 dark:text-slate-300 hover:border-cyanAccent/50 transition-all';
+          });
+          hudMode.textContent = cfg.hud;
+          dimTitle.textContent = cfg.title;
+          dimDesc.textContent = cfg.desc;
+          cardKicker.textContent = cfg.kicker;
+          cardMetric.textContent = cfg.metric;
+          cardTitle.textContent = cfg.cardTitle;
+          cardBody.textContent = cfg.cardBody;
+          outerMat.color.setHex(cfg.outerColor);
+          coreMat.color.setHex(cfg.coreColor);
         }
 
         slider.addEventListener('input', function () {
@@ -1692,18 +1797,7 @@
 
         document.querySelectorAll('.dim-4d-btn').forEach(function (btn) {
           btn.addEventListener('click', function () {
-            const key = btn.getAttribute('data-dim');
-            const cfg = dimConfig[key];
-            if (!cfg) return;
-            document.querySelectorAll('.dim-4d-btn').forEach(function (b) {
-              b.className = 'dim-4d-btn rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy px-3 py-2.5 text-left text-xs font-semibold text-slate-700 dark:text-slate-300 hover:border-cyanAccent/50 transition-all';
-            });
-            btn.className = 'dim-4d-btn rounded-xl border border-cyanAccent bg-sky-500/15 px-3 py-2.5 text-left text-xs font-bold text-sky-700 dark:text-cyanAccent transition-all';
-            hudMode.textContent = cfg.hud;
-            dimTitle.textContent = cfg.title;
-            dimDesc.textContent = cfg.desc;
-            outerMat.color.setHex(cfg.outerColor);
-            coreMat.color.setHex(cfg.coreColor);
+            selectDimension(btn.getAttribute('data-dim'));
           });
         });
 
