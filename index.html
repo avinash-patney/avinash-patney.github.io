@@ -482,7 +482,7 @@
     </section>
 
     <!-- Flagship Executive Decision Case (CEO / Board View) -->
-    <section aria-label="Flagship Decision Case" class="border-b border-slate-200 dark:border-slate-800/80 bg-slate-50 dark:bg-obsidian py-10">
+    <section id="flagship-case" aria-label="Flagship Decision Case" class="border-b border-slate-200 dark:border-slate-800/80 bg-slate-50 dark:bg-obsidian py-10">
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="rounded-2xl border border-gold/40 bg-white dark:bg-slateCard p-6 shadow-md">
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3.5">
@@ -496,7 +496,7 @@
               <span class="rounded-md bg-emerald-500/10 border border-emerald-500/30 px-2.5 py-1 font-bold text-emerald-700 dark:text-emerald-300">Delivered (MS): $5M+ ACV / 100+ Org</span>
             </div>
           </div>
-          <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-xs">
+          <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-[15px] sm:text-base">
             <div class="rounded-xl bg-slate-50 dark:bg-navy/80 p-3.5"><span class="font-mono text-[10px] font-bold uppercase text-cyanAccent">Decision Made</span><p class="mt-1 leading-relaxed text-slate-700 dark:text-slate-300">Mandated governed RAG pipelines with inline PII masking, automated auditability &amp; quantum-safe PQC evaluation.</p></div>
             <div class="rounded-xl bg-slate-50 dark:bg-navy/80 p-3.5"><span class="font-mono text-[10px] font-bold uppercase text-rose-500">Alternative Rejected</span><p class="mt-1 leading-relaxed text-slate-700 dark:text-slate-300">Rejected fast, unguarded direct LLM API wrappers that lacked residency boundaries or forensic audit logs.</p></div>
             <div class="rounded-xl bg-slate-50 dark:bg-navy/80 p-3.5"><span class="font-mono text-[10px] font-bold uppercase text-amber-600 dark:text-gold">Trade-Off Accepted</span><p class="mt-1 leading-relaxed text-slate-700 dark:text-slate-300">Accepted modest guardrail/sanitisation latency overhead to pursue the design objective of preventing PII exposure and ensuring audit readiness.</p></div>
@@ -515,7 +515,7 @@
             <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Live AI Lab</h2>
           </div>
           <p class="text-sm text-slate-600 dark:text-slate-400 max-w-md">
-            Interrogate Avinash's verified career history with the AI Twin or benchmark any job description with the Role Fit Analyzer.
+            Interrogate Avinash's verified career history with the AI Twin or map any job description to verified evidence with the Role Evidence Explorer.
           </p>
         </div>
 
@@ -579,7 +579,7 @@
             <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3.5">
               <div class="flex items-center gap-2.5">
                 <span class="h-2.5 w-2.5 rounded-full bg-gold"></span>
-                <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Role Fit Analyzer</h3>
+                <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Role Evidence Explorer</h3>
               </div>
               <button id="load-sample-jd" type="button" class="rounded-lg border border-gold/40 bg-amber-500/10 px-2.5 py-1 font-mono text-[11px] font-semibold text-amber-700 dark:text-gold hover:bg-amber-500/20 transition-colors no-print">
                 Load Sample Role
@@ -588,10 +588,10 @@
 
             <div class="mt-3.5 no-print">
               <label for="jd-input" class="sr-only">Paste job description</label>
-              <textarea id="jd-input" rows="3" placeholder="Paste a Principal Architect, Engineering Director, or Sovereign AI job description..." class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-obsidian px-3.5 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white focus:border-gold focus:outline-none"></textarea>
+              <textarea id="jd-input" rows="3" placeholder="Paste a Principal Architect, Engineering Director, or Sovereign AI job description..." class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-obsidian px-3.5 py-2.5 text-base text-slate-900 dark:text-white focus:border-gold focus:outline-none"></textarea>
               <div class="mt-2.5 flex items-center gap-2">
                 <button id="analyze-jd-btn" type="button" class="rounded-xl bg-navy dark:bg-gold px-4 py-2 text-xs font-bold text-white dark:text-obsidian hover:opacity-95 transition-opacity">
-                  Analyze Role Fit
+                  Map Role Evidence
                 </button>
                 <button id="clear-jd-btn" type="button" class="rounded-xl border border-slate-300 dark:border-slate-700 px-3.5 py-2 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:border-slate-400 transition-colors">
                   Clear
@@ -841,12 +841,12 @@
 
             <!-- Right: Editorial Executive Brief & Real-Work Proof -->
             <div class="lg:col-span-6 space-y-4">
-              <div id="story-5d-steps" class="grid grid-cols-5 gap-1.5">
-                <button type="button" data-story-idx="0" class="story-step-btn rounded-lg border border-cyanAccent bg-sky-500/20 px-1.5 py-1.5 text-center font-mono text-[10px] font-bold text-cyan-200 transition-all">01 Guardrails</button>
-                <button type="button" data-story-idx="1" class="story-step-btn rounded-lg border border-slate-700 bg-navy/90 px-1.5 py-1.5 text-center font-mono text-[10px] font-medium text-slate-300 hover:border-cyanAccent/60 transition-all">02 Zero Trust</button>
-                <button type="button" data-story-idx="2" class="story-step-btn rounded-lg border border-slate-700 bg-navy/90 px-1.5 py-1.5 text-center font-mono text-[10px] font-medium text-slate-300 hover:border-cyanAccent/60 transition-all">03 Sovereign RAG</button>
-                <button type="button" data-story-idx="3" class="story-step-btn rounded-lg border border-slate-700 bg-navy/90 px-1.5 py-1.5 text-center font-mono text-[10px] font-medium text-slate-300 hover:border-cyanAccent/60 transition-all">04 H100 / FinOps</button>
-                <button type="button" data-story-idx="4" class="story-step-btn rounded-lg border border-slate-700 bg-navy/90 px-1.5 py-1.5 text-center font-mono text-[10px] font-medium text-slate-300 hover:border-cyanAccent/60 transition-all">05 PQC Audit</button>
+              <div id="story-5d-steps" class="flex flex-wrap gap-2">
+                <button type="button" data-story-idx="0" class="story-step-btn rounded-lg border border-cyanAccent bg-sky-500/20 px-3 py-1.5 text-center font-mono text-[13px] sm:text-sm font-bold text-cyan-200 transition-all">01 Guardrails</button>
+                <button type="button" data-story-idx="1" class="story-step-btn rounded-lg border border-slate-700 bg-navy/90 px-3 py-1.5 text-center font-mono text-[13px] sm:text-sm font-medium text-slate-300 hover:border-cyanAccent/60 transition-all">02 Zero Trust</button>
+                <button type="button" data-story-idx="2" class="story-step-btn rounded-lg border border-slate-700 bg-navy/90 px-3 py-1.5 text-center font-mono text-[13px] sm:text-sm font-medium text-slate-300 hover:border-cyanAccent/60 transition-all">03 Sovereign RAG</button>
+                <button type="button" data-story-idx="3" class="story-step-btn rounded-lg border border-slate-700 bg-navy/90 px-3 py-1.5 text-center font-mono text-[13px] sm:text-sm font-medium text-slate-300 hover:border-cyanAccent/60 transition-all">04 H100 / FinOps</button>
+                <button type="button" data-story-idx="4" class="story-step-btn rounded-lg border border-slate-700 bg-navy/90 px-3 py-1.5 text-center font-mono text-[13px] sm:text-sm font-medium text-slate-300 hover:border-cyanAccent/60 transition-all">05 PQC Audit</button>
               </div>
 
               <div class="rounded-2xl border border-cyanAccent/30 bg-slate-900/75 p-5 backdrop-blur-xl">
@@ -987,7 +987,7 @@
             <button type="button" data-case-idx="2" class="case-btn rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-navy px-3 py-1.5 font-mono text-[11px] font-medium text-slate-700 dark:text-slate-300">SA Gov &amp; HP R&amp;D</button>
           </div>
         </div>
-        <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-xs">
+        <div class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 text-[15px] sm:text-base">
           <div class="rounded-xl bg-slate-50 dark:bg-navy/80 p-3.5"><span class="font-mono text-[10px] font-bold uppercase text-rose-600 dark:text-rose-400">Constraint</span><p id="cs-constraint" class="mt-1.5 leading-relaxed text-slate-700 dark:text-slate-300">Regulated enterprise customers needed agentic AI &amp; GPU scale without PII leakage, unverified outputs, or audit gaps.</p></div>
           <div class="rounded-xl bg-slate-50 dark:bg-navy/80 p-3.5"><span class="font-mono text-[10px] font-bold uppercase text-sky-700 dark:text-cyanAccent">Options Considered</span><p id="cs-options" class="mt-1.5 leading-relaxed text-slate-700 dark:text-slate-300">Direct LLM API wrappers vs. governed RAG pipelines with inline guardrails, PII sanitisation, and sovereign GPU orchestration.</p></div>
           <div class="rounded-xl bg-slate-50 dark:bg-navy/80 p-3.5"><span class="font-mono text-[10px] font-bold uppercase text-amber-700 dark:text-gold">What I Owned</span><p id="cs-owned" class="mt-1.5 leading-relaxed text-slate-700 dark:text-slate-300">Directed regional AI &amp; security engineering strategy, architecture roadmaps, and quantum-safe PQC evaluations.</p></div>
@@ -1011,7 +1011,7 @@
 
         <!-- Sim 1: Token-Cost FinOps -->
         <div id="sim-panel-finops" class="sim-panel mt-5 grid gap-5 md:grid-cols-2 items-center">
-          <div class="space-y-4 text-xs">
+          <div class="space-y-4 text-sm">
             <div>
               <div class="flex justify-between font-semibold"><span>Monthly Requests</span><span id="fin-req-val" class="font-mono text-cyanAccent">500K / mo</span></div>
               <input id="fin-req" type="range" aria-label="Monthly AI Requests in Thousands" min="100" max="2000" step="100" value="500" class="mt-1.5 w-full accent-sky-500" />
@@ -1032,14 +1032,14 @@
               Assumption: Optimised = Baseline &times; (1 &minus; 0.65&times;CacheHit &minus; 0.45&times;RoutingShare). Illustrative model only.
             </p>
           </div>
-          <div class="rounded-xl bg-slate-50 dark:bg-navy/85 p-4 border border-slate-200 dark:border-slate-800 space-y-3 text-xs">
+          <div class="rounded-xl bg-slate-50 dark:bg-navy/85 p-4 border border-slate-200 dark:border-slate-800 space-y-3 text-sm">
             <div class="relative h-44 w-full">
               <canvas id="finops-chart"></canvas>
             </div>
             <div class="grid grid-cols-3 gap-2 border-t border-slate-200 dark:border-slate-700 pt-2.5 text-center">
-              <div><span class="block text-[10px] text-slate-500 dark:text-slate-400">Baseline</span><span id="fin-base-out" class="font-mono font-bold">2.00B</span></div>
-              <div><span class="block text-[10px] text-slate-500 dark:text-slate-400">Optimised</span><span id="fin-opt-out" class="font-mono font-bold text-emerald-600 dark:text-emerald-400">0.90B</span></div>
-              <div><span class="block text-[10px] text-slate-500 dark:text-slate-400">Savings</span><span id="fin-save-out" class="font-mono font-bold text-amber-700 dark:text-gold">55%</span></div>
+              <div><span class="block text-xs text-slate-500 dark:text-slate-400">Baseline</span><span id="fin-base-out" class="font-mono font-bold">2.00B</span></div>
+              <div><span class="block text-xs text-slate-500 dark:text-slate-400">Optimised</span><span id="fin-opt-out" class="font-mono font-bold text-emerald-600 dark:text-emerald-400">0.90B</span></div>
+              <div><span class="block text-xs text-slate-500 dark:text-slate-400">Savings</span><span id="fin-save-out" class="font-mono font-bold text-amber-700 dark:text-gold">55%</span></div>
             </div>
           </div>
         </div>
@@ -1226,7 +1226,7 @@
               <span class="rounded-md bg-sky-500/10 px-2.5 py-1 font-mono text-[10px] font-semibold text-sky-700 dark:text-cyanAccent">ASSESS &amp; ALIGN</span>
             </div>
             <h3 class="mt-3 font-display text-base font-bold text-slate-900 dark:text-white">Sovereign &amp; Risk Baseline</h3>
-            <ul class="mt-3 space-y-2 text-xs leading-relaxed text-slate-600 dark:text-slate-300">
+            <ul class="mt-3 space-y-2 text-[15px] sm:text-base leading-relaxed text-slate-600 dark:text-slate-300">
               <li>&bull; Audit active AI pilots, GPU/cloud spend &amp; token unit economics</li>
               <li>&bull; Map data-residency boundaries, PII exposure &amp; regulatory gaps</li>
               <li>&bull; Align CIO, CISO, and business unit priorities into a single roadmap</li>
@@ -1239,7 +1239,7 @@
               <span class="rounded-md bg-amber-500/10 px-2.5 py-1 font-mono text-[10px] font-semibold text-amber-700 dark:text-gold">ARCHITECT &amp; HARDEN</span>
             </div>
             <h3 class="mt-3 font-display text-base font-bold text-slate-900 dark:text-white">Governed Reference Stack</h3>
-            <ul class="mt-3 space-y-2 text-xs leading-relaxed text-slate-600 dark:text-slate-300">
+            <ul class="mt-3 space-y-2 text-[15px] sm:text-base leading-relaxed text-slate-600 dark:text-slate-300">
               <li>&bull; Establish reusable RAG, guardrail &amp; PII-sanitisation blueprints</li>
               <li>&bull; Implement Zero Trust IAM, BYOK/HSM encryption &amp; SIEM audit trails</li>
               <li>&bull; Gate production launches on red-team, latency &amp; FinOps benchmarks</li>
@@ -1252,7 +1252,7 @@
               <span class="rounded-md bg-emerald-500/10 px-2.5 py-1 font-mono text-[10px] font-semibold text-emerald-700 dark:text-emerald-300">SCALE &amp; GOVERN</span>
             </div>
             <h3 class="mt-3 font-display text-base font-bold text-slate-900 dark:text-white">Production Scale &amp; Org Enablement</h3>
-            <ul class="mt-3 space-y-2 text-xs leading-relaxed text-slate-600 dark:text-slate-300">
+            <ul class="mt-3 space-y-2 text-[15px] sm:text-base leading-relaxed text-slate-600 dark:text-slate-300">
               <li>&bull; Roll out AgentOps, MLOps &amp; automated compliance telemetry</li>
               <li>&bull; Enable engineering &amp; GTM teams with repeatable architecture patterns</li>
               <li>&bull; Deliver executive &amp; board reporting on ROI, risk posture &amp; PQC readiness</li>
@@ -1408,9 +1408,9 @@
                 <span class="font-mono text-slate-500 dark:text-slate-400">13 Oct 2026</span>
               </div>
               <h3 class="mt-3 font-display text-sm font-bold text-slate-900 dark:text-white">AI Needs its own Firewall</h3>
-              <p class="mt-1.5 text-xs leading-relaxed text-slate-600 dark:text-slate-400">Dedicated AI perimeter controls, prompt-injection defense, and guardrail enforcement for enterprise LLM workloads.</p>
+              <p class="mt-1.5 text-[15px] sm:text-base leading-relaxed text-slate-600 dark:text-slate-400">Dedicated AI perimeter controls, prompt-injection defense, and guardrail enforcement for enterprise LLM workloads.</p>
             </div>
-            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-amber-700 dark:text-gold hover:underline">Read on LinkedIn &rarr;</a>
+            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-sm font-semibold text-amber-700 dark:text-gold hover:underline">Read on LinkedIn &rarr;</a>
           </article>
 
           <article data-pub-type="ai" class="pub-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slateCard p-5 shadow-sm flex flex-col justify-between">
@@ -1420,9 +1420,9 @@
                 <span class="font-mono text-slate-500 dark:text-slate-400"></span>
               </div>
               <h3 class="mt-3 font-display text-sm font-bold text-slate-900 dark:text-white">The AI Tokenomics Trap: What Enterprises Don&rsquo;t Budget For</h3>
-              <p class="mt-1.5 text-xs leading-relaxed text-slate-600 dark:text-slate-400">Hidden inference, context-window, and multi-agent token economics that derail enterprise AI ROI without FinOps.</p>
+              <p class="mt-1.5 text-[15px] sm:text-base leading-relaxed text-slate-600 dark:text-slate-400">Hidden inference, context-window, and multi-agent token economics that derail enterprise AI ROI without FinOps.</p>
             </div>
-            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-sky-700 dark:text-cyanAccent hover:underline">Read on LinkedIn &rarr;</a>
+            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-sm font-semibold text-sky-700 dark:text-cyanAccent hover:underline">Read on LinkedIn &rarr;</a>
           </article>
 
           <article data-pub-type="security" class="pub-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slateCard p-5 shadow-sm flex flex-col justify-between">
@@ -1432,9 +1432,9 @@
                 <span class="font-mono text-slate-500 dark:text-slate-400"></span>
               </div>
               <h3 class="mt-3 font-display text-sm font-bold text-slate-900 dark:text-white">Responsible AI: The Fairness Testing Playbook (Part 2)</h3>
-              <p class="mt-1.5 text-xs leading-relaxed text-slate-600 dark:text-slate-400">Practical evaluation protocols and bias-testing gates for production AI systems in regulated environments.</p>
+              <p class="mt-1.5 text-[15px] sm:text-base leading-relaxed text-slate-600 dark:text-slate-400">Practical evaluation protocols and bias-testing gates for production AI systems in regulated environments.</p>
             </div>
-            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-emerald-700 dark:text-emerald-400 hover:underline">Read on LinkedIn &rarr;</a>
+            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-sm font-semibold text-emerald-700 dark:text-emerald-400 hover:underline">Read on LinkedIn &rarr;</a>
           </article>
 
           <article data-pub-type="security" class="pub-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slateCard p-5 shadow-sm flex flex-col justify-between">
@@ -1444,9 +1444,9 @@
                 <span class="font-mono text-slate-500 dark:text-slate-400"></span>
               </div>
               <h3 class="mt-3 font-display text-sm font-bold text-slate-900 dark:text-white">Responsible AI: Governance That Actually Works (Part 1)</h3>
-              <p class="mt-1.5 text-xs leading-relaxed text-slate-600 dark:text-slate-400">Operationalizing AI governance beyond policy checklists with enforceable technical controls and accountability.</p>
+              <p class="mt-1.5 text-[15px] sm:text-base leading-relaxed text-slate-600 dark:text-slate-400">Operationalizing AI governance beyond policy checklists with enforceable technical controls and accountability.</p>
             </div>
-            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-emerald-700 dark:text-emerald-400 hover:underline">Read on LinkedIn &rarr;</a>
+            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-sm font-semibold text-emerald-700 dark:text-emerald-400 hover:underline">Read on LinkedIn &rarr;</a>
           </article>
 
           <article data-pub-type="security" class="pub-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slateCard p-5 shadow-sm flex flex-col justify-between">
@@ -1456,9 +1456,9 @@
                 <span class="font-mono text-slate-500 dark:text-slate-400">17 Sep 2026 (Announcement post)</span>
               </div>
               <h3 class="mt-3 font-display text-sm font-bold text-slate-900 dark:text-white">Zero Trust Misconceptions in Real-World Implementations</h3>
-              <p class="mt-1.5 text-xs leading-relaxed text-slate-600 dark:text-slate-400">Addressing identity, micro-segmentation, and operational friction in enterprise Zero Trust deployments.</p>
+              <p class="mt-1.5 text-[15px] sm:text-base leading-relaxed text-slate-600 dark:text-slate-400">Addressing identity, micro-segmentation, and operational friction in enterprise Zero Trust deployments.</p>
             </div>
-            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-amber-700 dark:text-gold hover:underline">Read on LinkedIn &rarr;</a>
+            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-sm font-semibold text-amber-700 dark:text-gold hover:underline">Read on LinkedIn &rarr;</a>
           </article>
 
           <article data-pub-type="ai" class="pub-card rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slateCard p-5 shadow-sm flex flex-col justify-between">
@@ -1468,9 +1468,9 @@
                 <span class="font-mono text-slate-500 dark:text-slate-400">16 Sep 2026 (Announcement post)</span>
               </div>
               <h3 class="mt-3 font-display text-sm font-bold text-slate-900 dark:text-white">The Hidden Architecture Behind Successful AI Implementations: 3 Technical Patterns That Enable Production-Grade AI</h3>
-              <p class="mt-1.5 text-xs leading-relaxed text-slate-600 dark:text-slate-400">Three foundational architecture patterns bridging experimental AI pilots to reliable, production-grade systems.</p>
+              <p class="mt-1.5 text-[15px] sm:text-base leading-relaxed text-slate-600 dark:text-slate-400">Three foundational architecture patterns bridging experimental AI pilots to reliable, production-grade systems.</p>
             </div>
-            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-sky-700 dark:text-cyanAccent hover:underline">Read on LinkedIn &rarr;</a>
+            <a href="https://www.linkedin.com/in/avinash-patney/recent-activity/articles/" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex items-center gap-1.5 font-mono text-sm font-semibold text-sky-700 dark:text-cyanAccent hover:underline">Read on LinkedIn &rarr;</a>
           </article>
 
           <article data-pub-type="speaking" class="pub-card rounded-2xl border border-cyanAccent/35 bg-slate-50 dark:bg-slateCard p-5 shadow-sm flex flex-col justify-between md:col-span-2 lg:col-span-3">
@@ -1481,9 +1481,9 @@
                   <span class="font-mono text-slate-500 dark:text-slate-400">9 Dec 2023</span>
                 </div>
                 <h3 class="mt-2 font-display text-base font-bold text-slate-900 dark:text-white">Microsoft Defender for Cloud &mdash; Improve Your Security Posture</h3>
-                <p class="mt-1 text-xs text-slate-600 dark:text-slate-400">Speaker at the India Cloud Security Summit (ICSS 2023), covering cloud security posture management (CSPM) and enterprise defense strategies.</p>
+                <p class="mt-1 text-[15px] sm:text-base text-slate-600 dark:text-slate-400">Speaker at the India Cloud Security Summit (ICSS 2023), covering cloud security posture management (CSPM) and enterprise defense strategies.</p>
               </div>
-              <a href="https://www.indiacloudsecuritysummit.com/dec2023" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-1.5 font-mono text-xs font-semibold text-sky-700 dark:text-cyanAccent hover:underline">View ICSS 2023 Program &rarr;</a>
+              <a href="https://www.indiacloudsecuritysummit.com/dec2023" target="_blank" rel="noopener noreferrer" class="shrink-0 inline-flex items-center gap-1.5 font-mono text-sm font-semibold text-sky-700 dark:text-cyanAccent hover:underline">View ICSS 2023 Program &rarr;</a>
             </div>
           </article>
         </div>
@@ -2072,7 +2072,10 @@
       }
 
       function matchedTerms(text, list) {
-        return list.filter(function (kw) { return text.indexOf(kw) !== -1; });
+        return list.filter(function (kw) {
+          const esc = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+          return new RegExp('\\b' + esc + '\\b', 'i').test(text);
+        });
       }
 
       function runRoleAnalysis() {
@@ -2111,21 +2114,29 @@
           gapList.innerHTML = '';
 
           const evidences = [];
-          if (aiMatched.length > 0) evidences.push('[' + aiMatched.slice(0, 3).join(', ') + '] → AWS Role (2025–Present) & Flagship Case');
-          if (infraMatched.length > 0) evidences.push('[' + infraMatched.slice(0, 3).join(', ') + '] → AWS GPU/HPC Strategy & HP R&D');
-          if (secMatched.length > 0) evidences.push('[' + secMatched.slice(0, 3).join(', ') + '] → CCSP ((ISC)²), ICSS 2023 Talk & AWS Security');
-          if (leadMatched.length > 0) evidences.push('[' + leadMatched.slice(0, 3).join(', ') + '] → Microsoft 100+ Org & HP $2M+ R&D Budget');
-          if (evidences.length === 0) evidences.push('No AI, Cloud, Security, or Engineering Leadership keywords detected in this description.');
+          if (aiMatched.length > 0) evidences.push({ text: '[' + aiMatched.slice(0, 3).join(', ') + '] → AWS Role & Flagship Case', href: '#flagship-case' });
+          if (infraMatched.length > 0) evidences.push({ text: '[' + infraMatched.slice(0, 3).join(', ') + '] → AWS GPU/HPC & HP R&D', href: '#experience' });
+          if (secMatched.length > 0) evidences.push({ text: '[' + secMatched.slice(0, 3).join(', ') + '] → ICSS 2023 & Security Articles', href: '#publications' });
+          if (leadMatched.length > 0) evidences.push({ text: '[' + leadMatched.slice(0, 3).join(', ') + '] → Microsoft 100+ Org & HP Budget', href: '#experience' });
+          if (evidences.length === 0) evidences.push({ text: 'No AI, Cloud, Security, or Engineering Leadership requirements matched.', href: null });
 
           const gaps = [];
-          if (t.indexOf('kubernetes') !== -1 || t.indexOf('terraform') !== -1) gaps.push('Specific K8s/Terraform IaC depth not itemized on CV—confirm hands-on stack');
-          if (t.indexOf('arabic') !== -1) gaps.push('Languages listed are English, Hindi & Punjabi (not Arabic)');
-          if (overall < 45) gaps.push('Role appears outside Enterprise AI, Cloud & Security Architecture scope');
+          if (/\bkubernetes\b|\bterraform\b/i.test(t)) gaps.push('Specific K8s/Terraform IaC depth not itemized on CV—confirm hands-on stack');
+          if (/\barabic\b/i.test(t)) gaps.push('Languages listed are English, Hindi & Punjabi (not Arabic)');
+          if (domainsMatched === 0) gaps.push('Role appears outside Enterprise AI, Cloud & Security Architecture scope');
           gaps.push('Confirm engagement model, governance scope, and target start window');
 
           evidences.slice(0, 4).forEach(function (item) {
             const li = document.createElement('li');
-            li.textContent = '• ' + item;
+            if (item.href) {
+              const a = document.createElement('a');
+              a.href = item.href;
+              a.className = 'underline decoration-cyanAccent/50 hover:text-cyanAccent transition-colors';
+              a.textContent = '• ' + item.text;
+              li.appendChild(a);
+            } else {
+              li.textContent = '• ' + item.text;
+            }
             evList.appendChild(li);
           });
           gaps.slice(0, 3).forEach(function (item) {
@@ -2816,8 +2827,8 @@
         document.querySelectorAll('.story-step-btn').forEach(function (b) {
           const isSel = parseInt(b.getAttribute('data-story-idx'), 10) === idx;
           b.className = isSel
-            ? 'story-step-btn rounded-lg border border-cyanAccent bg-sky-500/20 px-1.5 py-1.5 text-center font-mono text-[10px] font-bold text-cyan-200 transition-all'
-            : 'story-step-btn rounded-lg border border-slate-700 bg-navy/90 px-1.5 py-1.5 text-center font-mono text-[10px] font-medium text-slate-300 hover:border-cyanAccent/60 transition-all';
+            ? 'story-step-btn rounded-lg border border-cyanAccent bg-sky-500/20 px-3 py-1.5 text-center font-mono text-[13px] sm:text-sm font-bold text-cyan-200 transition-all'
+            : 'story-step-btn rounded-lg border border-slate-700 bg-navy/90 px-3 py-1.5 text-center font-mono text-[13px] sm:text-sm font-medium text-slate-300 hover:border-cyanAccent/60 transition-all';
         });
         setTheaterGate(idx);
       }
