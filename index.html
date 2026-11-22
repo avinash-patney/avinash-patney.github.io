@@ -1,6 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth dark">
+<html class="scroll-smooth dark" lang="en" dir="ltr">
 <head>
+<!-- locale-build:start --><link rel="canonical" href="https://avinash-patney.github.io/">
+<link rel="alternate" hreflang="en" href="https://avinash-patney.github.io/">
+<link rel="alternate" hreflang="fr" href="https://avinash-patney.github.io/fr/">
+<link rel="alternate" hreflang="ar" href="https://avinash-patney.github.io/ar/">
+<link rel="alternate" hreflang="x-default" href="https://avinash-patney.github.io/">
+<style>.language-navigation{display:flex;gap:.15rem;align-items:center;font:650 12px/1.5 system-ui;white-space:nowrap}.language-navigation a{padding:.35rem;border-radius:.3rem}.language-navigation a[aria-current]{background:#075985;color:white}.language-navigation a:focus-visible{outline:2px solid currentColor;outline-offset:2px}html[dir=rtl] body{font-family:"Noto Sans Arabic",Tahoma,Arial,sans-serif}html[dir=rtl] :is(h1,h2,h3,label,p,.font-display,.font-mono){font-family:"Noto Sans Arabic",Tahoma,Arial,sans-serif}html[dir=rtl] :is(input,textarea) {text-align:start}html:is([lang=fr],[lang=ar]) main :is(h1,h2,h3,p,li,dd,dt,button,label,a){overflow-wrap:anywhere;min-width:0}html:is([lang=fr],[lang=ar]) :is(#story-5d-steps,#arch-consequences,.sim-tab-btn){min-width:0;white-space:normal}@media(max-width:420px){header .language-navigation{gap:0}.language-navigation a{padding:.3rem}header > div > a{min-width:0}header > div > a span{overflow-wrap:anywhere}}</style><style>@media(max-width:639px){html:is([lang=fr],[lang=ar]) :is(#architecture-4d,#ai-lab,#contact) :is(.grid,.flex)>*{min-inline-size:0}html:is([lang=fr],[lang=ar]) #contact .flex:has(>button){flex-wrap:wrap}html:is([lang=fr],[lang=ar]) #canvas-4d-wrap{max-inline-size:100%}html:is([lang=fr],[lang=ar]) #twin-form #twin-input{inline-size:0;flex:1 1 0%}html:is([lang=fr],[lang=ar]) #twin-form button{flex:0 1 auto}}</style><!-- locale-build:end -->
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Avinash Patney — Enterprise AI, Cloud &amp; Security Leader</title>
@@ -229,7 +236,7 @@
   <!-- Floating "Ask my AI Twin" Button -->
   <button id="floating-twin-btn" type="button" aria-label="Ask my AI Twin" class="fixed bottom-5 right-5 z-40 hidden items-center gap-2 rounded-full border border-cyanAccent/50 bg-navy/95 dark:bg-gradient-to-r dark:from-sky-500 dark:to-amber-500 px-4 py-2.5 text-xs font-bold text-white dark:text-obsidian shadow-2xl hover:scale-105 transition-all no-print">
     <span class="h-2 w-2 rounded-full bg-emerald-400 dark:bg-obsidian pulse-glow"></span>
-    <span>Ask my AI Twin</span>
+    <span data-i18n="ctaTwin">Ask my AI Twin</span>
   </button>
 
   <!-- Top Navigation -->
@@ -259,6 +266,7 @@
 
       <!-- Actions -->
       <div class="flex items-center gap-2.5">
+        <nav class="language-navigation" aria-label="Language"><a href="/" lang="en" hreflang="en" aria-label="English" aria-current="page">EN</a><a href="/fr/" lang="fr" hreflang="fr" aria-label="Français">FR</a><a href="/ar/" lang="ar" hreflang="ar" aria-label="العربية">ع</a></nav>
         <button id="theme-toggle" type="button" aria-label="Toggle color theme" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slateCard text-slate-700 dark:text-slate-200 hover:border-cyanAccent/60 transition-colors">
           <svg id="icon-sun" class="hidden h-4 w-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -313,7 +321,7 @@
           <div class="lg:col-span-8">
             <div class="hero-stagger hero-stagger-1 inline-flex flex-wrap items-center gap-2 rounded-full border border-cyanAccent/40 bg-navy/80 px-3.5 py-1.5 font-mono text-[11px] font-medium text-gold-light backdrop-blur-md shadow-lg">
               <span class="h-2 w-2 rounded-full bg-emerald-400 pulse-glow"></span>
-              <span class="font-semibold">25+ Years &bull; Sovereign AI &amp; Cloud Security</span>
+              <span data-i18n="heroBadge" class="font-semibold">25+ Years &bull; Sovereign AI &amp; Cloud Security</span>
             </div>
 
             <h1 class="hero-stagger hero-stagger-2 mt-6 pb-2 leading-[1.16] font-display text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl ai-gradient-text">
@@ -344,14 +352,14 @@
                 <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                 </svg>
-                <span>Download Brief</span>
+                <span data-i18n="ctaBrief">Download Brief</span>
               </button>
 
               <button id="hero-copy-email" type="button" class="inline-flex items-center gap-2 rounded-xl border border-cyanAccent/60 bg-white/95 dark:bg-slateCard px-4 py-3 text-sm font-semibold text-slate-900 dark:text-white hover:border-cyanAccent transition-colors shadow-sm">
                 <svg class="h-4 w-4 text-amber-700 dark:text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span>Copy Email</span>
+                <span data-i18n="ctaEmail">Copy Email</span>
               </button>
 
               <a href="https://linkedin.com/in/avinash-patney" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-slate-600 bg-white/90 dark:bg-slateCard/85 px-4 py-3 text-sm font-medium text-slate-800 dark:text-slate-100 hover:border-cyanAccent transition-colors glass-card">
@@ -488,7 +496,7 @@
           <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 dark:border-slate-800 pb-3.5">
             <div>
               <span class="font-mono text-[10px] font-bold uppercase tracking-widest text-amber-700 dark:text-gold">Flagship Executive Decision &bull; AWS APAC</span>
-              <h2 class="mt-0.5 font-display text-lg font-bold text-slate-900 dark:text-white">Governing Enterprise Agentic AI Before Production Scale</h2>
+              <h2 data-i18n="flagshipTitle" class="mt-0.5 font-display text-lg font-bold text-slate-900 dark:text-white">Governing Enterprise Agentic AI Before Production Scale</h2>
             </div>
             <div class="flex flex-wrap gap-2 font-mono text-[10px]">
               <span class="rounded-md bg-amber-500/10 border border-gold/30 px-2.5 py-1 font-bold text-amber-700 dark:text-gold">Influenced: $50M+ Roadmaps</span>
@@ -512,7 +520,7 @@
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <span class="font-mono text-xs font-bold uppercase tracking-widest text-sky-700 dark:text-cyanAccent">Interactive Profile Intelligence</span>
-            <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Live AI Lab</h2>
+            <h2 data-i18n="aiLabTitle" class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Live AI Lab</h2>
           </div>
           <p class="text-sm text-slate-600 dark:text-slate-400 max-w-md">
             Interrogate Avinash's verified career history with the AI Twin or map any job description to verified evidence with the Role Evidence Explorer.
@@ -532,7 +540,7 @@
                 </button>
                 <div>
                   <div class="flex items-center gap-2">
-                    <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">AI Twin</h3>
+                    <h3 data-i18n="twinTitle" class="font-display text-base font-bold text-slate-900 dark:text-white">AI Twin</h3>
                     <span id="twin-status-text" class="font-mono text-[10px] text-emerald-600 dark:text-emerald-400">5D Core Online</span>
                   </div>
                   <span id="twin-mode-label" class="block font-mono text-[10px] text-slate-500 dark:text-slate-400">Click 5D avatar to pulse &amp; brief</span>
@@ -579,7 +587,7 @@
             <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3.5">
               <div class="flex items-center gap-2.5">
                 <span class="h-2.5 w-2.5 rounded-full bg-gold"></span>
-                <h3 class="font-display text-base font-bold text-slate-900 dark:text-white">Role Evidence Explorer</h3>
+                <h3 data-i18n="explorerTitle" class="font-display text-base font-bold text-slate-900 dark:text-white">Role Evidence Explorer</h3>
               </div>
               <button id="load-sample-jd" type="button" class="rounded-lg border border-gold/40 bg-amber-500/10 px-2.5 py-1 font-mono text-[11px] font-semibold text-amber-700 dark:text-gold hover:bg-amber-500/20 transition-colors no-print">
                 Load Sample Role
@@ -590,7 +598,7 @@
               <label for="jd-input" class="sr-only">Paste job description</label>
               <textarea id="jd-input" rows="3" placeholder="Paste a Principal Architect, Engineering Director, or Sovereign AI job description..." class="w-full rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-obsidian px-3.5 py-2.5 text-base text-slate-900 dark:text-white focus:border-gold focus:outline-none"></textarea>
               <div class="mt-2.5 flex items-center gap-2">
-                <button id="analyze-jd-btn" type="button" class="rounded-xl bg-navy dark:bg-gold px-4 py-2 text-xs font-bold text-white dark:text-obsidian hover:opacity-95 transition-opacity">
+                <button id="analyze-jd-btn" data-i18n="mapBtn" type="button" class="rounded-xl bg-navy dark:bg-gold px-4 py-2 text-xs font-bold text-white dark:text-obsidian hover:opacity-95 transition-opacity">
                   Map Role Evidence
                 </button>
                 <button id="clear-jd-btn" type="button" class="rounded-xl border border-slate-300 dark:border-slate-700 px-3.5 py-2 text-xs font-semibold text-slate-600 dark:text-slate-300 hover:border-slate-400 transition-colors">
@@ -674,7 +682,7 @@
         <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
           <div>
             <span class="font-mono text-xs font-bold uppercase tracking-widest text-sky-700 dark:text-cyanAccent">Interactive 3D + Time (4D) Visualization</span>
-            <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">4D Sovereign AI &amp; Career Architecture</h2>
+            <h2 data-i18n="archTitle" class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">4D Sovereign AI &amp; Career Architecture</h2>
           </div>
           <p class="text-sm text-slate-600 dark:text-slate-400 max-w-md">
             Drag to orbit the 3D neural topology and scrub the 4th dimension (Time: 2000 &rarr; 2026+) to inspect each architectural era.
@@ -921,7 +929,7 @@
       <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-gold">Commercial &amp; Delivery Track Record</span>
-          <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Selected Business &amp; Delivery Impact</h2>
+          <h2 data-i18n="impactTitle" class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Selected Business &amp; Delivery Impact</h2>
         </div>
         <p class="text-sm text-slate-600 dark:text-slate-400 max-w-md">
           Verified outcomes spanning hyperscaler AI architecture, strategic enterprise accounts, and R&amp;D engineering scale.
@@ -1080,7 +1088,7 @@
         <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>
             <span class="font-mono text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-gold">Core Capabilities</span>
-            <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Technology &amp; Leadership Expertise</h2>
+            <h2 data-i18n="expertiseTitle" class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Technology &amp; Leadership Expertise</h2>
           </div>
 
           <div id="expertise-tabs" role="tablist" aria-label="Expertise pillars" class="flex flex-wrap gap-2 no-print">
@@ -1212,7 +1220,7 @@
         <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <span class="font-mono text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-gold">How I Drive Day-One Value</span>
-            <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Executive 30&ndash;60&ndash;90 Day AI &amp; Security Playbook</h2>
+            <h2 data-i18n="playbookTitle" class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Executive 30&ndash;60&ndash;90 Day AI &amp; Security Playbook</h2>
           </div>
           <p class="text-sm text-slate-600 dark:text-slate-400 max-w-md">
             Structured execution model for moving enterprises from fragmented AI pilots to governed, cost-efficient production scale.
@@ -1267,7 +1275,7 @@
       <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
         <div>
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-gold">25+ Years Career Trajectory</span>
-          <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Professional Experience</h2>
+          <h2 data-i18n="expTitle" class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Professional Experience</h2>
         </div>
 
         <div class="flex flex-wrap items-center gap-2 no-print">
@@ -1390,7 +1398,7 @@
         <div class="flex flex-wrap items-end justify-between gap-4">
           <div>
             <span class="font-mono text-xs font-bold uppercase tracking-widest text-sky-700 dark:text-cyanAccent">Thought Leadership &amp; Speaking</span>
-            <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Published Work &amp; Speaking</h2>
+            <h2 data-i18n="pubTitle" class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Published Work &amp; Speaking</h2>
           </div>
           <div class="flex flex-wrap gap-1.5 no-print">
             <button type="button" data-pub-filter="all" class="pub-filter-btn rounded-lg bg-navy dark:bg-gold px-3 py-1.5 font-mono text-xs font-bold text-white dark:text-obsidian">All (7)</button>
@@ -1494,7 +1502,7 @@
     <section id="credentials" class="reveal-section border-t border-slate-200 dark:border-slate-800/80 bg-slate-100/70 dark:bg-navy/50 py-16">
       <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <span class="font-mono text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-gold">Qualifications &amp; Global Readiness</span>
-        <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Education, Credentials &amp; Languages</h2>
+        <h2 data-i18n="credTitle" class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Education, Credentials &amp; Languages</h2>
 
         <div class="mt-8 grid gap-6 md:grid-cols-3">
           <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slateCard p-6 shadow-sm">
@@ -1533,7 +1541,7 @@
       <div class="grid gap-8 lg:grid-cols-5">
         <div class="lg:col-span-2">
           <span class="font-mono text-xs font-bold uppercase tracking-widest text-amber-700 dark:text-gold">Direct Contact</span>
-          <h2 class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Connect with Avinash</h2>
+          <h2 data-i18n="contactTitle" class="mt-1 font-display text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-3xl">Connect with Avinash</h2>
           <p class="mt-3 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
             Available for executive leadership, Principal Architect, Engineering Director, and sovereign AI &amp; cloud security advisory mandates.
           </p>
@@ -1825,11 +1833,11 @@
 
       const knowledgeBase = [
         {
-          keywords: ['gpu', 'hpc', 'nvidia', 'h100', 'h200', 'gb300', 'cuda', 'cluster', 'networking', 'storage'],
+          keywords: ['gpu', 'hpc', 'nvidia', 'h100', 'h200', 'gb300', 'cuda', 'cluster', 'networking', 'storage', 'infrastructure', 'السحابة', 'الحوسبة'],
           answer: exactTwinResponses["node:gpu"]
         },
         {
-          keywords: ['aws', 'rag', 'llm', 'agentic', 'agentops', 'guardrail', 'pii', 'token', 'mlops', 'sovereign ai'],
+          keywords: ['aws', 'rag', 'llm', 'agentic', 'agentops', 'guardrail', 'pii', 'token', 'mlops', 'sovereign ai', 'ia', 'agentique', 'souverain', 'الذكاء الاصطناعي', 'السيادي'],
           answer: exactTwinResponses["node:aws"]
         },
         {
@@ -1837,7 +1845,7 @@
           answer: "Avinash's verified commercial track record includes: $50M+ in strategic AI and security investments influenced at AWS; $10M+ in incremental revenue opportunities identified at Microsoft Azure; $5M+ annual contract value across 10+ enterprise and public-sector accounts; a $3M+ portfolio at Ricoh Australia; and a $2M+ annual R&D budget at HP."
         },
         {
-          keywords: ['security', 'nesa', 'desc', 'difc', 'eu ai act', 'gdpr', 'pqc', 'quantum', 'zero trust', 'devsecops', 'ccsp', 'compliance'],
+          keywords: ['security', 'nesa', 'desc', 'difc', 'eu ai act', 'gdpr', 'pqc', 'quantum', 'zero trust', 'devsecops', 'ccsp', 'compliance', 'sécurité', 'confiance zéro', 'conformité', 'الأمن السيبراني', 'الثقة الصفرية'],
           answer: exactTwinResponses["node:security"]
         },
         {
@@ -2074,7 +2082,7 @@
       function matchedTerms(text, list) {
         return list.filter(function (kw) {
           const esc = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-          return new RegExp('\\b' + esc + '\\b', 'i').test(text);
+          return new RegExp('(?:^|[^\\p{L}\\p{N}_])' + esc + '(?=$|[^\\p{L}\\p{N}_])', 'iu').test(text);
         });
       }
 
@@ -2087,10 +2095,10 @@
         setJdState('loading');
         setTimeout(function () {
           const t = raw.toLowerCase();
-          const aiMatched = matchedTerms(t, ['ai', 'rag', 'llm', 'agentic', 'guardrail', 'mlops', 'openai', 'aws', 'azure']);
-          const infraMatched = matchedTerms(t, ['gpu', 'hpc', 'nvidia', 'h100', 'h200', 'gb300', 'cuda', 'cluster', 'cloud', 'network', 'storage']);
-          const secMatched = matchedTerms(t, ['security', 'zero trust', 'sovereign', 'nesa', 'desc', 'difc', 'gdpr', 'eu ai act', 'pqc', 'ccsp', 'devsecops', 'compliance', 'siem']);
-          const leadMatched = matchedTerms(t, ['director', 'principal', 'architect', 'c-suite', 'cto', 'ciso', 'cio', 'engineer', 'team', 'strategy', 'budget', 'finops', 'governance']);
+          const aiMatched = matchedTerms(t, ['ai', 'ia', 'rag', 'llm', 'agentic', 'agentique', 'guardrail', 'garde-fou', 'mlops', 'openai', 'aws', 'azure', 'الذكاء الاصطناعي', 'الوكيل الذكي', 'نماذج اللغة']);
+          const infraMatched = matchedTerms(t, ['gpu', 'hpc', 'nvidia', 'h100', 'h200', 'gb300', 'cuda', 'cluster', 'cloud', 'nuage', 'réseau', 'stockage', 'السحابة', 'الحوسبة', 'البنية التحتية']);
+          const secMatched = matchedTerms(t, ['security', 'sécurité', 'souverain', 'souveraine', 'zero trust', 'confiance zéro', 'sovereign', 'nesa', 'desc', 'difc', 'gdpr', 'rgpd', 'eu ai act', 'pqc', 'ccsp', 'devsecops', 'compliance', 'conformité', 'siem', 'الأمن السيبراني', 'السيادي', 'الثقة الصفرية', 'الامتثال']);
+          const leadMatched = matchedTerms(t, ['director', 'directeur', 'principal', 'architect', 'architecte', 'c-suite', 'cto', 'ciso', 'cio', 'dsi', 'rssi', 'engineer', 'ingénieur', 'team', 'équipe', 'strategy', 'stratégie', 'budget', 'finops', 'governance', 'gouvernance', 'القيادة', 'مدير', 'مهندس معماري', 'استراتيجية', 'الحوكمة']);
 
           const domainsMatched = [aiMatched, infraMatched, secMatched, leadMatched].filter(function (a) { return a.length > 0; }).length;
           document.getElementById('jd-overall-score').textContent = domainsMatched + ' / 4 Domains Covered';
