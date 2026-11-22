@@ -1658,7 +1658,7 @@
                 </div>
               </a>
 
-              <a id="botim-call-link" href="https://webmeet.botim.me/" target="_blank" rel="noopener noreferrer" data-botim-num="+61 422 704 716" aria-label="Call on Botim (+61 422 704 716)" class="flex items-center gap-3 rounded-xl border border-sky-500/40 bg-sky-500/10 p-3.5 hover:border-sky-400 hover:bg-sky-500/15 transition-all">
+              <a id="botim-call-link" href="https://botim.me/" target="_blank" rel="noopener noreferrer" data-botim-num="+61 422 704 716" aria-label="Call on Botim (+61 422 704 716)" class="flex items-center gap-3 rounded-xl border border-sky-500/40 bg-sky-500/10 p-3.5 hover:border-sky-400 hover:bg-sky-500/15 transition-all">
                 <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#00A3FF] text-white shadow-sm">
                   <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M12 2C6.48 2 2 6.03 2 11c0 2.75 1.38 5.21 3.55 6.86L4.6 21.5l3.92-1.45C9.61 20.66 10.78 21 12 21c5.52 0 10-4.03 10-9s-4.48-10-10-10zm3.7 13.07c-.28.44-1.08.84-1.52.89-.4.04-.92.06-1.49-.11-.34-.11-.78-.25-1.35-.5-2.37-1.02-3.92-3.42-4.04-3.58-.12-.16-.96-1.28-.96-2.44s.61-1.74.83-1.98c.22-.24.47-.3.63-.3h.45c.14 0 .34-.05.53.4.2.48.67 1.65.73 1.77.06.12.1.26.02.42-.08.16-.12.26-.24.4-.12.14-.25.31-.36.42-.12.12-.24.25-.1.49.14.24.63 1.04 1.36 1.69.94.83 1.72 1.09 1.96 1.21.24.12.38.1.52-.06.14-.16.6-.7.76-.94.16-.24.32-.2.54-.12.22.08 1.39.65 1.63.77.24.12.4.18.46.28.06.1.06.58-.22 1.02z"/>
@@ -1872,8 +1872,15 @@
 
       const botimLink = document.getElementById('botim-call-link');
       if (botimLink) {
-        botimLink.addEventListener('click', function () {
+        botimLink.addEventListener('click', function (e) {
           copyText('+61 422 704 716', 'Copied +61 422 704 716 for Botim');
+          if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            e.preventDefault();
+            window.location.href = 'botim://';
+            setTimeout(function () {
+              if (!document.hidden) window.open('https://botim.me/', '_blank', 'noopener,noreferrer');
+            }, 800);
+          }
         });
       }
 
